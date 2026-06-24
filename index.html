@@ -99,7 +99,7 @@ border-radius:50%;
 
 @keyframes spin{
 
-from{
+  from{
 transform:rotate(0deg);
 }
 
@@ -108,7 +108,44 @@ transform:rotate(360deg);
 }
 
 }
+.cross{
+...
+}
 
+position:absolute;
+font-size:40px;
+color:rgba(0,0,0,.06);
+
+animation:floatCross 10s ease-in-out infinite;
+
+pointer-events:none;
+
+}
+
+.cross2{
+animation-delay:2s;
+}
+
+.cross3{
+animation-delay:4s;
+}
+
+@keyframes floatCross{
+
+  
+0%{
+transform:translateY(0px) rotate(0deg);
+}
+
+50%{
+transform:translateY(-25px) rotate(8deg);
+}
+
+100%{
+transform:translateY(0px) rotate(0deg);
+}
+
+}
 .logo{
 width:520px;
 max-width:90%;
@@ -233,8 +270,23 @@ padding:0 20px;
 
 <div class="sigil"></div>
 
-<img src="logo.png" class="logo">
+<div class="cross"
+style="left:15%;top:25%;">
+✝
+</div>
 
+<div class="cross cross2"
+style="right:18%;top:30%;">
+✝
+</div>
+
+<div class="cross cross3"
+style="left:22%;bottom:18%;">
+✝
+</div>
+
+<img src="logo.png" class="logo">
+  
 <div class="drop">
 DROP 001
 </div>
