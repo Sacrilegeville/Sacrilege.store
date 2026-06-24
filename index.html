@@ -430,13 +430,88 @@ LIMITED DROP
 </div>
   
   </section>
-  
+  <section
+style="
+padding:120px 8%;
+background:white;
+">
+
+<p
+style="
+letter-spacing:4px;
+color:#777;
+font-size:12px;
+">
+COLOR ARCHIVE
+</p>
+
+<h2
+style="
+font-size:70px;
+margin-top:20px;
+">
+CHOOSE YOUR COLORWAY
+</h2>
+
+<div
+style="
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:60px;
+">
+
+<div onclick="changeColor('black.jpg')" style="cursor:pointer;">
+<img src="black.jpg" style="width:100%;">
+<p style="margin-top:15px;">BLACK</p>
+</div>
+
+<div onclick="changeColor('white.jpg')" style="cursor:pointer;">
+<img src="white.jpg" style="width:100%;">
+<p style="margin-top:15px;">WHITE</p>
+</div>
+
+<div onclick="changeColor('grey.jpg')" style="cursor:pointer;">
+<img src="grey.jpg" style="width:100%;">
+<p style="margin-top:15px;">GREY</p>
+</div>
+
+<div onclick="changeColor('sand.jpg')" style="cursor:pointer;">
+<img src="sand.jpg" style="width:100%;">
+<p style="margin-top:15px;">SAND</p>
+</div>
+
+</div>
+
+<div
+style="
+margin-top:80px;
+text-align:center;
+">
+
+<img
+id="mainColorImage"
+src="black.jpg"
+style="
+max-width:700px;
+width:100%;
+transition:.4s;
+">
+
+</div>
+
+</section>
   <script>
 
 function buyNow(){
 
 window.location.href =
 "https://shop.app/checkout/80505602105/cn/hWNDgnWMgRu32lQmRvh8MisE/en-us/shoppay_login?_cs=3.AMPS&_mcs=3.AMPS&_r=AQABqDu0VexMKPx1J7j_nhNnR31Ofqz2yXQkbsjYwts06EA&redirect_source=direct_checkout_product&tracking_unique=811b16ab-2ac6-4fd0-a530-aa3234f86ca0&tracking_visit=97f04c24-eba4-4cfc-811a-43aaaa23653f";
+
+}
+function changeColor(image){
+
+document.getElementById("mainColorImage").src = image;
 
 }
 
