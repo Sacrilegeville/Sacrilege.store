@@ -100,6 +100,14 @@ transform:rotate(0deg);
 to{
 transform:rotate(360deg);
 }
+.thornRing{
+position:absolute;
+width:900px;
+opacity:.15;
+animation:spin 30s linear infinite;
+z-index:0;
+pointer-events:none;
+}
 
 }
 .cross{
@@ -256,7 +264,7 @@ padding:0 20px;
 
 <section class="hero">
 
-<div class="sigil"></div>
+<img src="thorn-ring.png" class="thornRing">
 
 <div class="cross"
 style="left:15%;top:25%;">
