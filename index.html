@@ -1,1 +1,294 @@
+<!DOCTYPE html>
 
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SACRILEGE</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Helvetica,Arial,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff;
+color:#111;
+overflow-x:hidden;
+}
+
+/* NAV */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:80px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 50px;
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(12px);
+z-index:999;
+border-bottom:1px solid #eee;
+}
+
+nav a{
+text-decoration:none;
+color:black;
+letter-spacing:3px;
+font-size:12px;
+margin-left:30px;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+position:relative;
+overflow:hidden;
+}
+
+.sigil{
+position:absolute;
+width:900px;
+height:900px;
+border:1px solid rgba(0,0,0,.05);
+border-radius:50%;
+animation:spin 45s linear infinite;
+}
+
+.sigil:before{
+content:"";
+position:absolute;
+inset:120px;
+border:1px solid rgba(0,0,0,.05);
+border-radius:50%;
+}
+
+.sigil:after{
+content:"";
+position:absolute;
+inset:250px;
+border:1px solid rgba(0,0,0,.05);
+border-radius:50%;
+}
+
+@keyframes spin{
+from{
+transform:rotate(0deg);
+}
+to{
+transform:rotate(360deg);
+}
+}
+
+.logo{
+width:520px;
+max-width:90%;
+z-index:2;
+}
+
+.drop{
+margin-top:25px;
+letter-spacing:8px;
+font-size:12px;
+}
+
+.hero h1{
+font-size:90px;
+letter-spacing:10px;
+margin-top:20px;
+}
+
+.hero p{
+margin-top:20px;
+letter-spacing:4px;
+font-size:12px;
+color:#666;
+}
+
+.enter{
+margin-top:40px;
+background:black;
+color:white;
+border:none;
+padding:18px 50px;
+cursor:pointer;
+letter-spacing:4px;
+transition:.3s;
+}
+
+.enter:hover{
+transform:translateY(-4px);
+}
+
+/* FEATURED */
+
+.featured{
+padding:140px 8%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:center;
+}
+
+.featured img{
+width:100%;
+max-width:700px;
+display:block;
+margin:auto;
+transition:.4s;
+}
+
+.featured img:hover{
+transform:scale(1.03);
+}
+
+.price{
+font-size:26px;
+margin-top:30px;
+}
+
+.old{
+text-decoration:line-through;
+color:#999;
+}
+
+.sale{
+font-weight:700;
+}
+
+.buy{
+margin-top:30px;
+background:black;
+color:white;
+border:none;
+padding:18px 50px;
+cursor:pointer;
+letter-spacing:3px;
+}
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:46px;
+}
+
+.featured{
+grid-template-columns:1fr;
+}
+
+nav{
+padding:0 20px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div>SACRILEGE</div>
+
+<div>
+<a href="#drop">DROP</a>
+<a href="#archive">ARCHIVE</a>
+<a href="#contact">CONTACT</a>
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="sigil"></div>
+
+<img src="logo.png" class="logo">
+
+<div class="drop">
+DROP 001
+</div>
+
+<h1>
+IRREVERENCE
+</h1>
+
+<p>
+DISTRESSED THERMAL ARCHIVE
+</p>
+
+<button class="enter"
+onclick="document.getElementById('drop').scrollIntoView();">
+ENTER THE ARCHIVE </button>
+
+</section>
+
+<section class="featured" id="drop">
+
+<div>
+
+<img src="black.jpg">
+
+</div>
+
+<div>
+
+<p style="letter-spacing:4px;color:#777;">
+FEATURED GARMENT
+</p>
+
+<h2 style="font-size:70px;margin-top:20px;">
+IRREVERENCE
+</h2>
+
+<p style="margin-top:25px;line-height:1.8;color:#555;max-width:500px;">
+
+Heavyweight thermal built around contradiction,
+devotion, decay and irreverence.
+
+Limited release.
+
+No planned restocks.
+
+</p>
+
+<div class="price">
+
+<span class="old">$89</span>
+
+ 
+
+<span class="sale">$69 SMS ACCESS</span>
+
+</div>
+
+<button class="buy">
+
+BUY NOW
+
+</button>
+
+</div>
+
+</section>
+
+</body>
+</html>
